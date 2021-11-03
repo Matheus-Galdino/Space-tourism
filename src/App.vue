@@ -14,9 +14,14 @@ export default {
 
 <style lang="scss">
 @import url("./styles/reset.scss");
+@import url("./styles/global.scss");
 @import url("./styles/variables.scss");
 
 #app {
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
   height: 100vh;
   padding: 2.4rem 2.4rem 5rem;
 
