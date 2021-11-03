@@ -7,7 +7,7 @@
       and relax because we’ll give you a truly out of this world experience!
     </p>
 
-    <router-link to="/"> Explore </router-link>
+    <router-link to="/travel"> Explore </router-link>
   </section>
 </template>
 
