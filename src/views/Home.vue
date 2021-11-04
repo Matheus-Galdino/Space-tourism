@@ -7,7 +7,7 @@
       and relax because we’ll give you a truly out of this world experience!
     </p>
 
-    <router-link to="/travel"> Explore </router-link>
+    <router-link to="/destination/moon"> Explore </router-link>
   </section>
 </template>
 
