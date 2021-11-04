@@ -48,7 +48,7 @@ export default {
   letter-spacing: 2px;
 
   display: inline-block;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   text-decoration: none;
   text-transform: uppercase;
 }

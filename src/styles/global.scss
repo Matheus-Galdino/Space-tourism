@@ -10,4 +10,19 @@
 
   background: var(--backgroundImg) no-repeat;
   background-size: cover;
+
+  &__id {
+    font-size: 1.6rem;
+    line-height: 1em;
+    letter-spacing: 2.7px;
+
+    color: #fff;
+    margin-bottom: 3.2rem;
+    text-transform: uppercase;
+
+    span {
+      opacity: 0.25;
+      font-weight: bold;
+    }
+  }
 }

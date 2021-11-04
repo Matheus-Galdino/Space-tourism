@@ -13,8 +13,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("./styles/reset.scss");
-@import url("./styles/global.scss");
+@import "./styles/reset.scss";
+@import "./styles/global.scss";
 
 #app {
   display: flex;
