@@ -1,9 +1,14 @@
+@import "./variables.scss";
+
 .page {
   flex-grow: 1;
-  padding: min(5rem, 3vh) 0;
+  padding: 2.4rem 2.4rem 5rem;
 
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
+  background: var(--backgroundImg) no-repeat;
+  background-size: cover;
 }

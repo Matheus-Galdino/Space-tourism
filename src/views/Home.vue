@@ -19,6 +19,8 @@ export default {
 
 <style lang="scss" scoped>
 .home {
+  --backgroundImg: url("../assets/home/background-home-tablet.jpg");
+
   h2 {
     font-size: 1.6rem;
     line-height: 1em;

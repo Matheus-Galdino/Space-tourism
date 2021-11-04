@@ -15,17 +15,12 @@ export default {
 <style lang="scss">
 @import url("./styles/reset.scss");
 @import url("./styles/global.scss");
-@import url("./styles/variables.scss");
 
 #app {
   display: flex;
   flex-direction: column;
 
   color: #fff;
-  height: 100vh;
-  padding: 2.4rem 2.4rem 5rem;
-
-  background-size: cover;
-  background: url("./assets/home/background-home-tablet.jpg") no-repeat;
+  min-height: 100vh;
 }
 </style>
