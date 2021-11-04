@@ -30,7 +30,7 @@ nav {
   z-index: 2;
 
   padding: 0 2.4rem;
-  height: $navHeight;
+  height: var(--navHeight);
 }
 
 .burger {
