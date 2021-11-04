@@ -16,12 +16,21 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/variables.scss";
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  padding: 0 2.4rem;
+  height: $navHeight;
 }
 
 .burger {
