@@ -12,6 +12,13 @@ const routes = [
     path: "/destination/:name",
     name: "Destination",
     component: Destination,
+    beforeEnter: (to, from, next) => {
+      const destinationName = to.params.name.toLowerCase();
+      const destinations = ["moon", "mars", "europa", "titan"];
+
+      if (!destinations.includes(destinationName)) next("/destination/moon");
+      else next();
+    },
   },
 ];
 
