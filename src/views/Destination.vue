@@ -57,9 +57,11 @@ export default {
 .destination {
   --backgroundImg: url("../assets/destination/background-destination-tablet.jpg");
 
+  justify-content: flex-start;
+
   &__img {
     width: 20rem;
-    height: 20rem;    
+    height: 20rem;
 
     margin-bottom: 2.5rem;
   }
@@ -90,8 +92,11 @@ export default {
 
 .extra-info {
   text-align: center;
-  margin-bottom: 3rem;
   text-transform: uppercase;
+
+  &:last-of-type {
+    margin-top: 3rem;
+  }
 
   h2,
   h3 {
