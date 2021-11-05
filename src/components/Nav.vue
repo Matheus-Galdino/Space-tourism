@@ -35,15 +35,16 @@ nav {
 
 .burger {
   background: none;
-}
 
-.line {
-  width: 24px;
-  height: 3px;
-  background: #fff;
+  .line {
+    margin: 0;
+    width: 30px;
+    height: 3px;
+    background: #fff;
 
-  &:not(:last-of-type) {
-    margin-bottom: 5px;
+    &:not(:last-of-type) {
+      margin-bottom: 7px;
+    }
   }
 }
 </style>
