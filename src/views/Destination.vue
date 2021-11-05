@@ -83,13 +83,6 @@ export default {
   }
 }
 
-.line {
-  width: 100%;
-  height: 1px;
-  margin: 3rem 0;
-  background: #383b4b;
-}
-
 .extra-info {
   text-align: center;
   text-transform: uppercase;
