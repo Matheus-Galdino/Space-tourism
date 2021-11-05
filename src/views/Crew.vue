@@ -8,6 +8,8 @@
     <img :src="memberImg" :alt="member.name" class="member__img" />
     <div class="line"></div>
 
+    <CrewNav />
+
     <h2 class="role">{{ member.role }}</h2>
     <h1 class="name">{{ member.name }}</h1>
 
@@ -16,8 +18,11 @@
 </template>
 
 <script>
+import CrewNav from "../components/CrewNav.vue";
+
 export default {
   name: "Crew",
+  components: { CrewNav },
   data() {
     return {
       crew: [],
@@ -44,7 +49,7 @@ export default {
 }
 
 .member__img {
-  width: 30rem;
+  width: 35rem;
 }
 
 .line {
@@ -57,6 +62,7 @@ export default {
   font-weight: normal;
 
   opacity: 0.5;
+  margin-top: 3rem;
   text-transform: uppercase;
 }
 
