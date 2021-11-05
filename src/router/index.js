@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import Crew from "../views/Crew.vue";
 import Destination from "../views/Destination.vue";
 
 const routes = [
@@ -19,6 +20,11 @@ const routes = [
       if (!destinations.includes(destinationName)) next("/destination/moon");
       else next();
     },
+  },
+  {
+    path: "/crew/:name",
+    name: "Crew",
+    component: Crew,
   },
 ];
 
