@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Crew from "../views/Crew.vue";
-import Launch from "../views/Launch.vue";
+import Tech from "../views/Tech.vue";
 import Destination from "../views/Destination.vue";
 
 const routes = [
@@ -28,9 +28,9 @@ const routes = [
     component: Crew,
   },
   {
-    path: "/launch/:name",
-    name: "Launch",
-    component: Launch,
+    path: "/tech/:name",
+    name: "Tech",
+    component: Tech,
   },
 ];
 

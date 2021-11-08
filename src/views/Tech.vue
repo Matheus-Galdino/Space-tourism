@@ -9,8 +9,12 @@
 
 <script>
 export default {
-  name: "Launch",
+  name: "Tech",
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.launch {
+  --backgroundImg: url("../assets/technology/background-technology-mobile.jpg");
+}
+</style>
