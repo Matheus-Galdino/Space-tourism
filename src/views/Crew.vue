@@ -5,7 +5,7 @@
       Meet your crew
     </p>
 
-    <img :src="memberImg" :alt="member.name" class="member__img" />
+    <img :src="memberImg" :alt="member.name" loading="lazy" class="member__img" />
     <div class="line"></div>
 
     <CrewNav />
@@ -33,7 +33,7 @@ export default {
       return this.crew.find((x) => x.name.toLowerCase().includes(this.$route.params.name));
     },
     memberImg() {
-      return require(`../assets/${this.member.images.webp}`);
+      return require(`../assets/${this.member.images.png}`);
     },
   },
   beforeMount() {
@@ -49,7 +49,7 @@ export default {
 }
 
 .member__img {
-  width: 35rem;
+  height: 30rem;
 }
 
 .line {

@@ -4,7 +4,7 @@
       <span>01</span>
       Pick your destination
     </p>
-    <img :src="destinationImg" :alt="currentDestination.name" class="destination__img" />
+    <img :src="destinationImg" :alt="currentDestination.name" loading="lazy" class="destination__img" />
 
     <DestinationNav />
 
@@ -60,8 +60,7 @@ export default {
   justify-content: flex-start;
 
   &__img {
-    width: 20rem;
-    height: 20rem;
+    height: 18rem;
 
     margin-bottom: 2.5rem;
   }
