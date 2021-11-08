@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  --backgroundImg: url("../assets/home/background-home-tablet.jpg");
+  --backgroundImg: url("../assets/home/background-home-mobile.jpg");
 
   h2 {
     font-size: 1.6rem;

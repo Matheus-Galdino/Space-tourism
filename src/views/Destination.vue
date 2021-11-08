@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 .destination {
-  --backgroundImg: url("../assets/destination/background-destination-tablet.jpg");
+  --backgroundImg: url("../assets/destination/background-destination-mobile.jpg");
 
   justify-content: flex-start;
 

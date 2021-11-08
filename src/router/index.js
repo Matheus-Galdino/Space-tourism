@@ -28,7 +28,7 @@ const routes = [
     component: Crew,
   },
   {
-    path: "/tech/:name",
+    path: "/tech",
     name: "Tech",
     component: Tech,
   },

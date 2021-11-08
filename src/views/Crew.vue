@@ -45,7 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 .crew {
-  --backgroundImg: url("../assets/crew/background-crew-tablet.jpg");
+  --backgroundImg: url("../assets/crew/background-crew-mobile.jpg");
 }
 
 .member__img {
