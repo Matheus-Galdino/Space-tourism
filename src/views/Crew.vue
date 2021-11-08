@@ -23,23 +23,24 @@ import CrewNav from "../components/CrewNav.vue";
 export default {
   name: "Crew",
   components: { CrewNav },
+  props: {
+    data: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      crew: [],
       currentIndex: 1,
     };
   },
   computed: {
     member() {
-      return this.crew[this.currentIndex - 1];
+      return this.data[this.currentIndex - 1];
     },
     memberImg() {
       return require(`../assets/${this.member.images.png}`);
     },
-  },
-  beforeMount() {
-    const info = require("../data.json");
-    this.crew = info.crew;
   },
 };
 </script>

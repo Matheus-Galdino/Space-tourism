@@ -24,23 +24,24 @@ import TechNav from "../components/TechNav.vue";
 export default {
   name: "Tech",
   components: { TechNav },
+  props: {
+    data: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      techs: [],
       currentIndex: 1,
     };
   },
   computed: {
     currentTech() {
-      return this.techs[this.currentIndex - 1];
+      return this.data[this.currentIndex - 1];
     },
     techImg() {
       return require(`../assets/${this.currentTech.images.landscape}`);
     },
-  },
-  beforeMount() {
-    const info = require("../data.json");
-    this.techs = info.technology;
   },
 };
 </script>

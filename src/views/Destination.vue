@@ -33,26 +33,27 @@ import DestinationNav from "../components/DestinationNav.vue";
 export default {
   name: "Destination",
   components: { DestinationNav },
+  props: {
+    data: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      destinations: [],
       currentIndex: 0,
     };
   },
   computed: {
     currentDestination() {
-      return this.destinations[this.currentIndex];
+      return this.data[this.currentIndex];
     },
     destinationsNames() {
-      return this.destinations.map((destination) => destination.name);
+      return this.data.map((destination) => destination.name);
     },
     destinationImg() {
       return require(`../assets/${this.currentDestination.images.webp}`);
     },
-  },
-  beforeMount() {
-    const info = require("../data.json");
-    this.destinations = info.destinations;
   },
 };
 </script>
