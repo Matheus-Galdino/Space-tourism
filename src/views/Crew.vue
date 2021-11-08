@@ -8,7 +8,7 @@
     <img :src="memberImg" :alt="member.name" loading="lazy" class="member__img" />
     <div class="line"></div>
 
-    <CrewNav />
+    <CrewNav v-model="currentIndex" />
 
     <h2 class="role">{{ member.role }}</h2>
     <h1 class="name">{{ member.name }}</h1>
@@ -26,11 +26,12 @@ export default {
   data() {
     return {
       crew: [],
+      currentIndex: 1,
     };
   },
   computed: {
     member() {
-      return this.crew.find((x) => x.name.toLowerCase().includes(this.$route.params.name));
+      return this.crew[this.currentIndex - 1];
     },
     memberImg() {
       return require(`../assets/${this.member.images.png}`);

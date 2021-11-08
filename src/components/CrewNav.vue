@@ -1,15 +1,18 @@
 <template>
   <nav class="crew-nav">
-    <router-link class="ellipse" to="/crew/douglas"></router-link>
-    <router-link class="ellipse" to="/crew/mark"></router-link>
-    <router-link class="ellipse" to="/crew/victor"></router-link>
-    <router-link class="ellipse" to="/crew/anousheh"></router-link>
+    <button class="ellipse" v-for="n in 4" :key="n" @click="$emit('update:modelValue', n)" :class="{ active: n == modelValue }"></button>
   </nav>
 </template>
 
 <script>
 export default {
   name: "CrewNav",
+  props: {
+    modelValue: {
+      type: Number,
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -26,9 +29,10 @@ export default {
   opacity: 0.17;
   border-radius: 50%;
   background: #fff;
-}
+  transition: opacity 0.3s ease-in-out;
 
-.router-link-exact-active {
-  opacity: 1;
+  &.active {
+    opacity: 1;
+  }
 }
 </style>

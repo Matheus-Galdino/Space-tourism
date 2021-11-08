@@ -11,19 +11,12 @@ const routes = [
     component: Home,
   },
   {
-    path: "/destination/:name",
+    path: "/destination",
     name: "Destination",
-    component: Destination,
-    beforeEnter: (to, from, next) => {
-      const destinationName = to.params.name.toLowerCase();
-      const destinations = ["moon", "mars", "europa", "titan"];
-
-      if (!destinations.includes(destinationName)) next("/destination/moon");
-      else next();
-    },
+    component: Destination,    
   },
   {
-    path: "/crew/:name",
+    path: "/crew",
     name: "Crew",
     component: Crew,
   },

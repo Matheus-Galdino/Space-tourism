@@ -6,7 +6,7 @@
     </p>
     <img :src="destinationImg" :alt="currentDestination.name" loading="lazy" class="destination__img" />
 
-    <DestinationNav />
+    <DestinationNav v-model="currentIndex" :destinations="destinationsNames" />
 
     <h1 class="destination__name">{{ currentDestination.name }}</h1>
 
@@ -36,11 +36,15 @@ export default {
   data() {
     return {
       destinations: [],
+      currentIndex: 0,
     };
   },
   computed: {
     currentDestination() {
-      return this.destinations.find((x) => x.name.toLowerCase() == this.$route.params.name.toLowerCase());
+      return this.destinations[this.currentIndex];
+    },
+    destinationsNames() {
+      return this.destinations.map((destination) => destination.name);
     },
     destinationImg() {
       return require(`../assets/${this.currentDestination.images.webp}`);

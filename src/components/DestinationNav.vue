@@ -1,17 +1,10 @@
 <template>
   <nav class="destination-nav">
     <ul class="nav-links">
-      <li class="nav-link">
-        <router-link to="/destination/moon" class="link" id="moon"> Moon </router-link>
-      </li>
-      <li>
-        <router-link to="/destination/mars" class="link" id="mars">Mars</router-link>
-      </li>
-      <li>
-        <router-link to="/destination/europa" class="link" id="europa">Europa</router-link>
-      </li>
-      <li>
-        <router-link to="/destination/titan" class="link" id="titan">Titan</router-link>
+      <li class="nav-link" v-for="(destination, index) in destinations" :key="index">
+        <button class="link" @click="$emit('update:modelValue', index)" :id="index">
+          {{ destination }}
+        </button>
       </li>
       <div class="slider"></div>
     </ul>
@@ -21,12 +14,23 @@
 <script>
 export default {
   name: "DestinationNav",
-  computed: {
-    left() {
-      return document.getElementById(this.$route.params.name).offsetLeft ?? 0;
+  props: {
+    destinations: {
+      type: Array,
+      required: true,
     },
-    width() {
-      return document.getElementById(this.$route.params.name).offsetWidth ?? 44;
+    modelValue: {
+      type: Number,
+      required: true,
+    },
+  },
+  computed: {
+    sliderStyle() {
+      const activeElement = document.getElementById(this.modelValue);
+      return {
+        left: activeElement.offsetLeft ?? 0,
+        width: activeElement.offsetWidth ?? 44,
+      };
     },
   },
 };
@@ -47,6 +51,7 @@ export default {
   line-height: 1.2em;
   letter-spacing: 2px;
 
+  background: none;
   display: inline-block;
   padding-bottom: 12px;
   text-decoration: none;
@@ -56,11 +61,11 @@ export default {
 .slider {
   height: 3px;
   background: #fff;
-  width: calc(v-bind("width") * 1px);
+  width: calc(v-bind("sliderStyle.width") * 1px);
 
   position: absolute;
   bottom: 0;
-  left: calc(v-bind("left") * 1px);
+  left: calc(v-bind("sliderStyle.left") * 1px);
 
   transition: all 0.3s ease-in-out;
 }
