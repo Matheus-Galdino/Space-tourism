@@ -94,7 +94,10 @@ input:checked ~ .burger {
 }
 
 .nav-links {
-  display: none;
+  // animation styles
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
 
   position: fixed;
   top: 0;
@@ -107,6 +110,7 @@ input:checked ~ .burger {
 
   list-style: none;
   backdrop-filter: blur(81px);
+  transition: all 0.4s ease-in-out;
   background: rgba(255, 255, 255, 0.04);
 
   li:not(:last-of-type) {
@@ -146,6 +150,8 @@ input:checked ~ .burger {
 }
 
 input:checked ~ .nav-links {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 </style>
