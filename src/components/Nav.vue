@@ -71,10 +71,25 @@ nav {
     width: 30px;
     height: 3px;
     background: #fff;
+    transition: all 0.5s ease-in-out;
 
     &:not(:last-of-type) {
       margin-bottom: 7px;
     }
+  }
+}
+
+input:checked ~ .burger {
+  .line-1 {
+    opacity: 0;
+  }
+
+  .line-2 {
+    transform: rotate(45deg);
+  }
+
+  .line-3 {
+    transform: translateY(-10px) rotate(-50deg);
   }
 }
 
@@ -101,7 +116,7 @@ nav {
   a {
     display: inline-block;
     width: 100%;
-    
+
     color: #fff;
     font-size: 1.6rem;
     line-height: 1.3em;
@@ -127,7 +142,7 @@ nav {
 
   width: 4px;
   height: 100%;
-  background: #fff;  
+  background: #fff;
 }
 
 input:checked ~ .nav-links {
