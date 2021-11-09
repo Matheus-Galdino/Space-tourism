@@ -88,8 +88,7 @@ nav {
 
   width: 65vw;
 
-  padding: 3rem;
-  padding-top: 12rem;
+  padding: 12rem 0 3rem 3rem;
 
   list-style: none;
   backdrop-filter: blur(81px);
@@ -100,6 +99,9 @@ nav {
   }
 
   a {
+    display: inline-block;
+    width: 100%;
+    
     color: #fff;
     font-size: 1.6rem;
     line-height: 1.3em;
@@ -111,6 +113,21 @@ nav {
       margin-right: 1rem;
     }
   }
+}
+
+.router-link-exact-active {
+  position: relative;
+}
+
+.router-link-exact-active::before {
+  content: "";
+
+  position: absolute;
+  right: 0px;
+
+  width: 4px;
+  height: 100%;
+  background: #fff;  
 }
 
 input:checked ~ .nav-links {
